@@ -1,15 +1,33 @@
 $(document).ready(function(){
     $('.slider').slick({
+        asNavFor:'.sliderMin',
         arrows:true,
-        dots:true,
+        dots:false,
         adaptiveHeight:true,
         slidesToShow:1,
         slidesToScroll:1,
         speed:500,
         easing:'ease',
-        infinite:false,
+        infinite:true,
         initialSlide:0,
-        autoplay:true,
-        autoplaySpeed:500
+        autoplay:false,
+        fade:true,   
     });
+    $('.sliderMin').slick({
+        asNavFor:'.slider',
+        arrows:false,
+        dots:false,
+        adaptiveHeight:true,
+        adaptiveWidth:true,
+        slidesToShow:3,
+        slidesToScroll:1,
+        speed:500,
+        easing:'ease',
+        infinite:true,
+        initialSlide:0,
+        autoplay:false,
+        vertical:true,
+        verticalSwiping:true,
+        
+    })
 });
